@@ -1,0 +1,106 @@
+@charset "UTF-8";
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, table, td, dl, dt, dd, img, div, input {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+  background: url("../img/bg.png") repeat; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+/*头部*/
+.header {
+  width: 100%;
+  text-align: center;
+  height: 32px;
+  margin: 50px auto;
+  font-size: 0; }
+  .header a {
+    display: inline-block;
+    padding: 0 25px;
+    background-color: white;
+    color: #26b2c3;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 10px;
+    border: 1px solid #26b2c3;
+    border-radius: 15px; }
+    .header a:hover {
+      background-color: #26b2c3;
+      color: #ffffff; }
+  .header a.active {
+    background-color: #26b2c3;
+    color: #ffffff; }
+
+/*轮播图*/
+#my-slider {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  /*鼠标划入轮播图区域，左右按钮显示*/
+  /*圆圈按钮*/
+  /*当前的圆圈按钮*/
+  /*左右按钮*/ }
+  #my-slider:hover .slide-btn {
+    display: block; }
+  #my-slider ul.slide-image {
+    position: absolute;
+    /*图片层叠在一起*/
+    left: 0;
+    top: 0; }
+    #my-slider ul.slide-image li {
+      position: relative;
+      float: left; }
+      #my-slider ul.slide-image li a {
+        display: block;
+        text-decoration: none; }
+  #my-slider .circle-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 0;
+    text-align: center;
+    font-size: 0;
+    /*让li标签没有间隙*/
+    cursor: pointer; }
+    #my-slider .circle-btn li {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #ffffff; }
+  #my-slider li.circle-btn-active {
+    background: rgba(80, 80, 80, 0.5); }
+  #my-slider .slide-btn {
+    position: absolute;
+    width: 35px;
+    height: 70px;
+    line-height: 70px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    top: 50%;
+    margin-top: -35px;
+    font-size: 42px;
+    font-family: "宋体";
+    /*防止火狐浏览器默认黑体太粗*/
+    cursor: pointer;
+    border-radius: 3px;
+    display: none; }
+  #my-slider .btn_l {
+    left: 3%; }
+  #my-slider .btn_r {
+    right: 3%; }
+
+/*# sourceMappingURL=myslider.css.map */
