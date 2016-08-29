@@ -47,6 +47,7 @@ img {
   width: 600px;
   height: 400px;
   margin: 0 auto;
+  overflow: hidden;
   /*鼠标划入轮播图区域，左右按钮显示*/
   /*圆圈按钮*/
   /*当前的圆圈按钮*/
@@ -102,5 +103,19 @@ img {
     left: 3%; }
   #my-slider .btn_r {
     right: 3%; }
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: 25px;
+    margin: 20px auto; }
+    .header a {
+      padding: 0 10px;
+      font-size: 14px;
+      height: 25px;
+      line-height: 25px;
+      margin: 0 10px; } }
+@media screen and (max-width: 300px) {
+  .header {
+    width: 300px; } }
 
 /*# sourceMappingURL=myslider.css.map */

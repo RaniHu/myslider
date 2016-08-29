@@ -12,7 +12,8 @@
                 circleBtn: true,
                 autoSlide: false,
                 speed: "1500",
-                autoSlideSpeed: "2000"
+                autoSlideSpeed: "2000",
+                selfAdaptive:true
             };
             var settings = $.extend(defaults, options);
             var _this = $(this);
@@ -30,11 +31,32 @@
             var imageLis = _this.find("ul.slide-image li");                     //轮播图lis
             var imgWidth = _this.find("ul.slide-image li:first").width();
             var imgHeight = _this.find("ul.slide-image li:first").height();
-            _this.css({                                                         //设置轮播图容易的宽高
+
+            //设置pc端轮播图容器的宽高
+            _this.css({
                 width: imgWidth,
-                height: imgHeight,
-                overflow: "hidden"
+                height: imgHeight
             });
+
+
+            //适配移动端
+            var screenW=$(window).width();
+            if(settings.selfAdaptive&&screenW<=imgWidth){
+                forMobile();
+            }
+
+            function forMobile(){
+                _this.css({
+                    width:screenW,
+                    height:imgHeight/(imgWidth/screenW),
+                    overflow: "hidden"
+                });
+                _this.find("ul.slide-image li a img").css({
+                    width:screenW,
+                    height:imgHeight/(imgWidth/screenW)
+                });
+            }
+
             slideUl.width(imgWidth * 5);
 
             //淡入淡出效果样式
@@ -52,10 +74,6 @@
                     float: 'none'
                 });
                 imageLis.eq(0).show();                                  //默认显示第一张图片
-            }
-
-            if (settings.animate == "slide"){
-
             }
 
 
@@ -156,6 +174,11 @@
 
             //选择滑动动画效果
             function slide() {
+                if(settings.selfAdaptive==true&&screenW<=imgWidth){
+                    imgWidth=screenW;
+                }else{
+                    imgWidth=_this.find("ul.slide-image li a img").width();
+                }
                 if (imgIndex == imgLength) {
                     slideUl.css({left: 0});
                     imgIndex = 1;
@@ -165,6 +188,7 @@
                     slideUl.css({left: -(imgLength - 1) * imgWidth});
                     imgIndex = imgLength - 2;
                 }
+                //alert(imgWidth);
 
                 slideUl.stop().animate({left: -imgIndex * imgWidth}, settings.speed);
 

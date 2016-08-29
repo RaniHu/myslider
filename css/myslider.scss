@@ -1,32 +1,37 @@
-body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,table,td,dl,dt,dd,img,div,input{
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, table, td, dl, dt, dd, img, div, input {
   padding: 0;
-  margin:  0;
+  margin: 0;
 }
-body{
+
+body {
   font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
   background: url("../img/bg.png") repeat;
 }
-ul{
+
+ul {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
 }
-img{
+
+img {
   border: none;
 }
 
-$header-height:32px;
-$header-info-color:#26b2c3;
+$header-height: 32px;
+$mobile-header-height:25px;
+$header-info-color: #26b2c3;
 /*头部*/
-.header{
+.header {
   width: 100%;
   text-align: center;
   height: $header-height;
   margin: 50px auto;
   font-size: 0;
 
-  a{
+  a {
     display: inline-block;
     padding: 0 25px;
     background-color: white;
@@ -37,39 +42,39 @@ $header-info-color:#26b2c3;
     margin: 0 10px;
     border: 1px solid $header-info-color;
     border-radius: 15px;
-    &:hover{
+    &:hover {
       background-color: $header-info-color;
       color: #ffffff;
     }
   }
-  a.active{
+  a.active {
     background-color: $header-info-color;
     color: #ffffff;
   }
 }
+
 /*轮播图*/
-#my-slider{
+#my-slider {
 
   position: relative;
   width: 600px;
   height: 400px;
   margin: 0 auto;
-
+  overflow: hidden;
 
   /*鼠标划入轮播图区域，左右按钮显示*/
-  &:hover .slide-btn{
+  &:hover .slide-btn {
     display: block;
   }
 
-
   ul.slide-image {
-    position: absolute;      /*图片层叠在一起*/
+    position: absolute; /*图片层叠在一起*/
     left: 0;
-    top:0;
-    li{
+    top: 0;
+    li {
       position: relative;
       float: left;
-      a{
+      a {
         display: block;
         text-decoration: none;
       }
@@ -78,58 +83,75 @@ $header-info-color:#26b2c3;
   }
 
   /*圆圈按钮*/
-  .circle-btn{
+  .circle-btn {
     position: absolute;
     width: 100%;
     bottom: 5%;
-    left:0;
+    left: 0;
     text-align: center;
-    font-size: 0;       /*让li标签没有间隙*/
+    font-size: 0; /*让li标签没有间隙*/
     cursor: pointer;
 
-    li{
+    li {
       width: 12px;
       height: 12px;
       display: inline-block;
       margin: 0 5px;
       border-radius: 50%;
-      background-color:#ffffff;
+      background-color: #ffffff;
 
     }
   }
   /*当前的圆圈按钮*/
-  li.circle-btn-active{
-    background: rgba(80,80,80,0.5);
+  li.circle-btn-active {
+    background: rgba(80, 80, 80, 0.5);
   }
 
-
   /*左右按钮*/
-  .slide-btn{
+  .slide-btn {
     position: absolute;
     width: 35px;
     height: 70px;
     line-height: 70px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center;
-    top:50%;
+    top: 50%;
     margin-top: -35px;
     font-size: 42px;
-    font-family: "宋体";       /*防止火狐浏览器默认黑体太粗*/
+    font-family: "宋体"; /*防止火狐浏览器默认黑体太粗*/
     cursor: pointer;
     border-radius: 3px;
     display: none;
   }
 
-  .btn_l{
+  .btn_l {
     left: 3%;
   }
-  .btn_r{
+  .btn_r {
     right: 3%;
   }
 
 }
 
+@media screen and(max-width: 480px) {
+  .header {
+    height: $mobile-header-height;
+    margin: 20px auto;
+    a {
+      padding: 0 10px;
+      font-size: 14px;
+      height: $mobile-header-height;
+      line-height: $mobile-header-height;
+      margin: 0 10px;
+
+    }
+  }
+}@media screen and(max-width: 300px) {
+  .header {
+    width: 300px;
+  }
+}
 
 
 
