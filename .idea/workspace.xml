@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbca7ba9-fd04-4f04-a023-e182446f7fef" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.scss" />
-      <change type="DELETED" beforePath="E:\github\myslider\autoslide.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\css\myslider.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\css\myslider.css.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\css\myslider.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\img\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\img\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\img\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\img\4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\img\bg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\js\jquery-1.9.1.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\js\jquery.mySlider.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\github\myslider\slide.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cbca7ba9-fd04-4f04-a023-e182446f7fef" name="默认的" comment="" />
     <ignored path="myslider.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
