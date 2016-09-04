@@ -164,9 +164,9 @@ a {
           font-size: 14px; }
 
   .footer {
-    height: 40px; }
+    height: 35px; }
     .footer a {
-      line-height: 40px;
+      line-height: 35px;
       font-size: 12px; } }
 @media screen and (max-width: 375px) {
   .header {
@@ -191,7 +191,7 @@ a {
         margin: 8px auto; }
 
   .main {
-    width: 85%; }
+    width: 87%; }
     .main section h3 {
       padding-top: 15px;
       font-size: 18px; }
@@ -203,7 +203,7 @@ a {
         padding: 6px; }
         .main section ul li pre, .main section ul li span {
           margin: 5px auto;
-          font-size: 14px; }
+          font-size: 13px; }
 
   .footer {
     height: 40px; }
@@ -212,6 +212,12 @@ a {
       font-size: 12px; } }
 @media screen and (max-width: 300px) {
   body {
-    min-width: 300px; } }
+    min-width: 300px; }
+
+  main section ul li {
+    font-size: 15px;
+    padding: 3px; }
+    main section ul li pre, main section ul li span {
+      font-size: 12px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -232,9 +232,9 @@ a {
     }
   }
   .footer{
-    height: 40px;
+    height: 35px;
     a{
-      line-height: 40px;
+      line-height: 35px;
       font-size: 12px;
     }
   }
@@ -270,7 +270,7 @@ a {
     }
   }
   .main {
-    width: 85%;
+    width: 87%;
     section {
       h3 {
         padding-top: 15px;
@@ -284,7 +284,7 @@ a {
           padding: 6px;
           pre, span {
             margin:  5px auto;
-            font-size: 14px;
+            font-size: 13px;
           }
         }
       }
@@ -302,5 +302,18 @@ a {
 @media screen and(max-width: 300px) {
   body{
     min-width: 300px;
+  }
+  main {
+    section {
+      ul {
+        li {
+          font-size: 15px;
+          padding: 3px;
+          pre, span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
